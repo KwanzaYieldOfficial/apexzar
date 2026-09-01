@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yield Invest SA - Growth and Security</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #0b0f19;
+            color: #ffffff;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            padding: 30px 0 20px 0;
+        }
+        header h1 {
+            color: #00ff88;
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        header p {
+            color: #a0aec0;
+            font-size: 14px;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .welcome-box {
+            background: linear-gradient(135deg, #161e2e 0%, #1f293d 100%);
+            border: 1px solid #00ff88;
+            border-radius: 12px;
+            padding: 22px;
+            margin-bottom: 30px;
+            box-shadow: 0 6px 15px rgba(0, 255, 136, 0.1);
+        }
+        .welcome-box h2 {
+            color: #00ff88;
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .welcome-box p {
+            color: #e2e8f0;
+            font-size: 14px;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .welcome-box p:last-child {
+            margin-bottom: 0;
+            font-weight: bold;
+            color: #cbd5e0;
+        }
+        .section-title {
+            font-size: 18px;
+            margin: 25px 0 15px 0;
+            color: #e2e8f0;
+            border-left: 4px solid #00ff88;
+            padding-left: 10px;
+        }
+        /* Simulador */
+        .simulator-box {
+            background: #161e2e;
+            border: 1px solid #00ff88;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,255,136,0.1);
+        }
+        .simulator-box h3 {
+            color: #00ff88;
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+        .simulator-box label {
+            font-size: 13px;
+            color: #a0aec0;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .simulator-box select {
+            width: 100%;
+            background: #0b0f19;
+            color: #fff;
+            border: 1px solid #2d3748;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            outline: none;
+        }
+        .sim-result {
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px dashed #00ff88;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .sim-result span {
+            display: block;
+            font-size: 13px;
+            color: #a0aec0;
+        }
+        .sim-result strong {
+            color: #00ff88;
+            font-size: 22px;
+        }
+        /* Planos */
+        .plan-card {
+            background: #161e2e;
+            border: 1px solid #2d3748;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }
+        .plan-card h3 {
+            color: #fff;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+        .plan-price {
+            color: #00ff88;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .plan-return {
+            background: rgba(0, 255, 136, 0.1);
+            color: #00ff88;
+            padding: 5px 10px;
+            border-radius: 6px;
+            display: inline-block;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        /* Testemunhos */
+        .testimonial-card {
+            background: #161e2e;
+            border: 1px solid #2d3748;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: #cbd5e0;
+            font-style: italic;
+        }
+        .testimonial-card strong {
+            display: block;
+            color: #00ff88;
+            font-style: normal;
+            margin-top: 5px;
+            font-size: 12px;
+        }
+        /* FAQ */
+        .faq-item {
+            background: #161e2e;
+            border: 1px solid #2d3748;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .faq-item h4 {
+            color: #fff;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .faq-item p {
+            color: #a0aec0;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+        .info-box {
+            background: #161e2e;
+            border: 1px solid #2d3748;
+            border-radius: 12px;
+            padding: 20px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #cbd5e0;
+            text-align: center;
+        }
+        /* Botões de Contacto */
+        .contact-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 30px;
+        }
+        .telegram-btn {
+            display: block;
+            width: 100%;
+            background-color: #0088cc;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 136, 204, 0.4);
+        }
+        .whatsapp-btn {
+            display: block;
+            width: 100%;
+            background-color: #25d366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 12px;
+            color: #718096;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Yield Invest SA</h1>
+            <p>Build your financial future with security</p>
+        </header>
+
+        <div class="welcome-box">
+            <h2>Welcome to Financial Independence</h2>
+            <p>We believe that financial success comes from vision, consistency, and choosing the right partners. Here, your capital is managed with total rigor, transparency, and commitment to maximize your results.</p>
+            <p>Take the first step today and turn your opportunities into real achievements. We are with you every step of the way.</p>
+        </div>
+
+        <!-- Simulador de Lucros Interativo -->
+        <div class="simulator-box">
+            <h3>📊 Quick Profit Simulator</h3>
+            <label for="planSelect">Choose the investment amount:</label>
+            <select id="planSelect" onchange="calcularLucro()">
+                <option value="300|5">Starter Plan - R300 (+5%)</option>
+                <option value="700|10">Bronze Plan - R700 (+10%)</option>
+                <option value="1400|15">Silver Plan - R1,400 (+15%)</option>
+                <option value="3500|20">Gold Plan - R3,500 (+20%)</option>
+                <option value="7000|30">Platinum Plan - R7,000 (+30%)</option>
+                <option value="12000|40">Diamond Plan - R12,000 (+40%)</option>
+                <option value="17000|50">Elite Master Plan - R17,000 (+50%)</option>
+            </select>
+            <div class="sim-result">
+                <span>Estimated Total with Return:</span>
+                <strong id="resultadoSimulacao">R315</strong>
+            </div>
+        </div>
+
+        <div class="section-title">Our Investment Plans</div>
+
+        <div class="plan-card">
+            <h3>Starter Plan</h3>
+            <div class="plan-price">R300</div>
+            <div class="plan-return">Return of +5%</div>
+        </div>
+
+        <div class="plan-card">
+            <h3>Bronze Plan</h3>
+            <div class="plan-price">R700</div>
+            <div class="plan-return">Return of +10%</div>
+        </div>
+
+        <div class="plan-card">
+            <h3>Silver Plan</h3>
+            <div class="plan-price">R1,400</div>
+            <div class="plan-return">Return of +15%</div>
+        </div>
+
+        <div class="plan-card">
+            <h3>Gold Plan</h3>
+            <div class="plan-price">R3,500</div>
+            <div class="plan-return">Return of +20%</div>
+        </div>
+
+        <div class="plan-card">
+            <h3>Platinum Plan</h3>
+            <div class="plan-price">R7,000</div>
+            <div class="plan-return">Return of +30%</div>
+        </div>
+
+        <div class="plan-card">
+            <h3>Diamond Plan</h3>
+            <div class="plan-price">R12,000</div>
+            <div class="plan-return">Return of +40%</div>
+        </div>
+
+        <div class="plan-card">
+            <h3>Elite Master Plan</h3>
+            <div class="plan-price">R17,000</div>
+            <div class="plan-return">Return of +50%</div>
+        </div>
+
+        <!-- 10 Testemunhos de Investidores -->
+        <div class="section-title">What Our Investors Say</div>
+        
+        <div class="testimonial-card">
+            "Started with the R300 plan to test it out and everything went perfectly. The return dropped right on time. Recommended!"
+            <strong>— A. M., Johannesburg</strong>
+        </div>
+
+        <div class="testimonial-card">
+            "Excellent platform. The manager explained the whole process clearly. I've already upgraded to the Silver plan."
+            <strong>— C. S., Pretoria</strong>
+        </div>
+
+        <div class="testimonial-card">
+            "At first I was a bit skeptical, but I decided to risk the Bronze plan and became a loyal client. Very professional!"
+            <strong>— M. Dlamini, Durban</strong>
+        </div>
+
+        <div class="testimonial-card">
+            "Super fast support via chat and completely transparent processes. I recommend it to all my friends."
+            <strong>— J. K., Cape Town</strong>
+        </div>
+
+        <div class="testimonial-card">
+            "Made an investment in the Gold plan and got the expected profits without any hassle. Thumbs up!"
+            <strong>— H. Smith, Polokwane</strong>
+        </div>
+
+        <div class="testimonial-card">
+            "Serious and dedicated platform. It helped me put some idle savings to work."
+            <strong>— P. Ndlovu, Nelspruit</strong>
+        </div>
+
+        <div class="testimonial-card">
+            "Very good! The simulator helps figure out what we'll get and they deliver exactly what they promise."
+            <strong>— T. van der Merwe, Bloemfontein</strong>
+        </div>
+
+        <div class="testimonial-card">
+            "Fantastic experience. I started small and now I'm on the advanced plans. Keep up the great work."
+            <strong>— R. Manuel, Johannesburg</strong>
+        </div>
+
+        <div class="testimonial-card">
+            "Total security and confidence. Support cleared up all my doubts before making any transfer."
+            <strong>— E. Mokoena, Port Elizabeth</strong>
+        </div>
+
+        <div class="testimonial-card">
+            "The best investment service I've found tailored for the market. Simple, practical, and effective."
+            <strong>— K. Simão, Cape Town</strong>
+        </div>
+
+        <!-- Perguntas Frequentes (FAQ) -->
+        <div class="section-title">Frequently Asked Questions</div>
+
+        <div class="faq-item">
+            <h4>How do I start investing?</h4>
+            <p>Simply choose your plan, click one of the contact buttons below, and talk directly with our manager to begin the process.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Where are the payment details sent?</h4>
+            <p>To ensure maximum security and prevent fraud or data exposure, all transfer procedures are provided exclusively via private chat.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>How long does the return take?</h4>
+            <p>The cycle and detailed timeframes for each plan are aligned directly with the manager upon subscription.</p>
+        </div>
+
+        <div class="section-title">Ready to Start?</div>
+        <div class="info-box">
+            <p style="color: #f6ad55; font-size: 14px; margin-bottom: 8px;">⚠️ <strong>Personalized Support:</strong></p>
+            <p>Choose your favorite application below and speak immediately with the manager to secure your spot in the chosen plan.</p>
+        </div>
+
+        <!-- Botões de Contacto (Telegram + WhatsApp) -->
+        <div class="contact-btns">
+            <a href="https://t.me/Uchiha12355" class="telegram-btn" target="_blank">💬 Chat on Telegram</a>
+            <a href="https://wa.me/244955146843" class="whatsapp-btn" target="_blank">💚 Chat on WhatsApp (+244 955 146 843)</a>
+        </div>
+
+        <footer>
+            &copy; 2026 Yield Invest SA. All rights reserved.
+        </footer>
+    </div>
+
+    <!-- Script JavaScript para o Simulador -->
+    <script>
+        function calcularLucro() {
+            const select = document.getElementById('planSelect');
+            const valores = select.value.split('|');
+            const capital = parseFloat(valores[0]);
+            const percentagem = parseFloat(valores[1]);
+            
+            const total = capital + (capital * (percentagem / 100));
+            
+            document.getElementById('resultadoSimulacao').innerText = 'R' + total.toLocaleString('en-US');
+        }
+        calcularLucro();
+    </script>
+
+</body>
+</html>
