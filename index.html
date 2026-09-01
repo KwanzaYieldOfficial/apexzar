@@ -66,6 +66,55 @@
             border-left: 4px solid #00ff88;
             padding-left: 10px;
         }
+        /* Estilos do Simulador Interativo */
+        .simulator-box {
+            background: #161e2e;
+            border: 1px solid #00ff88;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 25px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,255,136,0.1);
+        }
+        .simulator-box h3 {
+            color: #00ff88;
+            font-size: 17px;
+            margin-bottom: 15px;
+        }
+        .simulator-box label {
+            font-size: 13px;
+            color: #a0aec0;
+            display: block;
+            margin-bottom: 8px;
+        }
+        .simulator-box select {
+            width: 100%;
+            background: #0b0f19;
+            color: #fff;
+            border: 1px solid #2d3748;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            outline: none;
+        }
+        .sim-result {
+            background: rgba(0, 255, 136, 0.05);
+            border: 1px dashed #00ff88;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 10px;
+        }
+        .sim-result span {
+            display: block;
+            font-size: 13px;
+            color: #a0aec0;
+        }
+        .sim-result strong {
+            color: #00ff88;
+            font-size: 22px;
+        }
+        /* Planos */
         .plan-card {
             background: #161e2e;
             border: 1px solid #2d3748;
@@ -93,6 +142,42 @@
             display: inline-block;
             font-weight: bold;
             font-size: 13px;
+        }
+        /* Testemunhos */
+        .testimonial-card {
+            background: #161e2e;
+            border: 1px solid #2d3748;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: #cbd5e0;
+            font-style: italic;
+        }
+        .testimonial-card strong {
+            display: block;
+            color: #00ff88;
+            font-style: normal;
+            margin-top: 5px;
+            font-size: 12px;
+        }
+        /* FAQ / Perguntas Frequentes */
+        .faq-item {
+            background: #161e2e;
+            border: 1px solid #2d3748;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        .faq-item h4 {
+            color: #fff;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        .faq-item p {
+            color: #a0aec0;
+            font-size: 13px;
+            line-height: 1.5;
         }
         .info-box {
             background: #161e2e;
@@ -140,6 +225,25 @@
             <p>Dê o primeiro passo hoje e transforme as suas oportunidades em conquistas reais. Estamos consigo em cada etapa do caminho.</p>
         </div>
 
+        <!-- Simulador de Lucros Interativo -->
+        <div class="simulator-box">
+            <h3>📊 Simulador de Lucro Rápido</h3>
+            <label for="planSelect">Escolha o valor do investimento:</label>
+            <select id="planSelect" onchange="calcularLucro()">
+                <option value="7000|5">Plano Starter - 7.000 Kz (+5%)</option>
+                <option value="15000|10">Plano Bronze - 15.000 Kz (+10%)</option>
+                <option value="30000|15">Plano Silver - 30.000 Kz (+15%)</option>
+                <option value="75000|20">Plano Gold - 75.000 Kz (+20%)</option>
+                <option value="150000|30">Plano Platinum - 150.000 Kz (+30%)</option>
+                <option value="350000|40">Plano Diamond - 350.000 Kz (+40%)</option>
+                <option value="700000|50">Plano Elite Master - 700.000 Kz (+50%)</option>
+            </select>
+            <div class="sim-result">
+                <span>Total Estimado com o Retorno:</span>
+                <strong id="resultadoSimulacao">7.350 Kz</strong>
+            </div>
+        </div>
+
         <div class="section-title">Nossos Planos de Investimento</div>
 
         <div class="plan-card">
@@ -184,10 +288,41 @@
             <div class="plan-return">Retorno de +50%</div>
         </div>
 
-        <div class="section-title">Como Começar</div>
+        <!-- Prova Social / Testemunhos -->
+        <div class="section-title">O que dizem os nossos investidores</div>
+        
+        <div class="testimonial-card">
+            "Comecei com o plano de 15.000 Kz para testar e fiquei surpreendido com a rapidez e seriedade do atendimento. Recomendo totalmente!"
+            <strong>— A. M., Luanda</strong>
+        </div>
+
+        <div class="testimonial-card">
+            "Excelente plataforma. O gestor explicou todo o processo pelo Telegram com muita clareza. Já fiz o upgrade para o plano Silver."
+            <strong>— C. S., Benguela</strong>
+        </div>
+
+        <!-- Perguntas Frequentes (FAQ) -->
+        <div class="section-title">Perguntas Frequentes</div>
+
+        <div class="faq-item">
+            <h4>Como faço para começar a investir?</h4>
+            <p>Basta escolher o seu plano, clicar no botão do Telegram abaixo e falar diretamente com o nosso gestor para iniciar o processo.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Onde são enviados os detalhes de pagamento?</h4>
+            <p>Para garantir a segurança máxima e evitar fraudes ou exposição de dados, todos os procedimentos de transferência são facultados exclusivamente em conversa privada.</p>
+        </div>
+
+        <div class="faq-item">
+            <h4>Quanto tempo demora o retorno?</h4>
+            <p>O ciclo e prazos detalhados de cada plano são alinhados diretamente com o gestor no momento da subscrição.</p>
+        </div>
+
+        <div class="section-title">Pronto para Começar?</div>
         <div class="info-box">
-            <p style="color: #f6ad55; font-size: 14px; margin-bottom: 8px;">⚠️ <strong>Processo Seguro:</strong></p>
-            <p>Para assegurar um atendimento personalizado e a validação correta do seu plano, os detalhes e procedimentos de investimento são combinados diretamente com o gestor através do nosso canal oficial.</p>
+            <p style="color: #f6ad55; font-size: 14px; margin-bottom: 8px;">⚠️ <strong>Atendimento Personalizado:</strong></p>
+            <p>Clique abaixo para entrar em contacto imediato com o gestor no Telegram e garantir a sua vaga no plano escolhido.</p>
         </div>
 
         <a href="https://t.me/Uchiha12355" class="telegram-btn" target="_blank">💬 Falar com o Gestor no Telegram</a>
@@ -197,5 +332,22 @@
         </footer>
     </div>
 
+    <!-- Script JavaScript para o Simulador funcionar em tempo real -->
+    <script>
+        function calcularLucro() {
+            const select = document.getElementById('planSelect');
+            const valores = select.value.split('|');
+            const capital = parseFloat(valores[0]);
+            const percentagem = parseFloat(valores[1]);
+            
+            const total = capital + (capital * (percentagem / 100));
+            
+            document.getElementById('resultadoSimulacao').innerText = total.toLocaleString('pt-PT') + ' Kz';
+        }
+        // Executa uma vez ao carregar
+        calcularLucro();
+    </script>
+
 </body>
 </html>
+
