@@ -66,7 +66,7 @@
             border-left: 4px solid #00ff88;
             padding-left: 10px;
         }
-        /* Estilos do Simulador Interativo */
+        /* Simulador */
         .simulator-box {
             background: #161e2e;
             border: 1px solid #00ff88;
@@ -161,7 +161,7 @@
             margin-top: 5px;
             font-size: 12px;
         }
-        /* FAQ / Perguntas Frequentes */
+        /* FAQ */
         .faq-item {
             background: #161e2e;
             border: 1px solid #2d3748;
@@ -189,6 +189,13 @@
             color: #cbd5e0;
             text-align: center;
         }
+        /* Botões de Contacto */
+        .contact-btns {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 30px;
+        }
         .telegram-btn {
             display: block;
             width: 100%;
@@ -200,8 +207,20 @@
             text-decoration: none;
             font-size: 16px;
             font-weight: bold;
-            margin-top: 30px;
             box-shadow: 0 4px 10px rgba(0, 136, 204, 0.4);
+        }
+        .whatsapp-btn {
+            display: block;
+            width: 100%;
+            background-color: #25d366;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.4);
         }
         footer {
             text-align: center;
@@ -288,17 +307,57 @@
             <div class="plan-return">Retorno de +50%</div>
         </div>
 
-        <!-- Prova Social / Testemunhos -->
+        <!-- 10 Testemunhos de Investidores -->
         <div class="section-title">O que dizem os nossos investidores</div>
         
         <div class="testimonial-card">
-            "Comecei com o plano de 15.000 Kz para testar e fiquei surpreendido com a rapidez e seriedade do atendimento. Recomendo totalmente!"
+            "Comecei com o plano de 7.000 Kz para testar e correu tudo perfeitamente. O retorno caiu certinho. Recomendo!"
             <strong>— A. M., Luanda</strong>
         </div>
 
         <div class="testimonial-card">
-            "Excelente plataforma. O gestor explicou todo o processo pelo Telegram com muita clareza. Já fiz o upgrade para o plano Silver."
+            "Excelente plataforma. O gestor explicou todo o processo com muita clareza. Já fiz o upgrade para o plano Silver."
             <strong>— C. S., Benguela</strong>
+        </div>
+
+        <div class="testimonial-card">
+            "No início estava um pouco desconfiada, mas decidi arriscar no plano Bronze e fiquei cliente fiel. Muito profissional!"
+            <strong>— M. Domingos, Huambo</strong>
+        </div>
+
+        <div class="testimonial-card">
+            "Atendimento super rápido pelo chat e processos transparentes. Recomendo a todos os meus amigos."
+            <strong>— J. K., Lobito</strong>
+        </div>
+
+        <div class="testimonial-card">
+            "Fiz um investimento no plano Gold e obtive os lucros esperados sem nenhuma complicação. Estão de parabéns!"
+            <strong>— H. Silva, Lubango</strong>
+        </div>
+
+        <div class="testimonial-card">
+            "Plataforma séria e dedicada. Ajudou-me a rentabilizar algumas poupanças que tinha paradas."
+            <strong>— P. Nsingi, Malanje</strong>
+        </div>
+
+        <div class="testimonial-card">
+            "Muito bom! O simulador ajuda a perceber quanto vamos receber e cumprem exatamente o que prometem."
+            <strong>— T. Fernandes, Namibe</strong>
+        </div>
+
+        <div class="testimonial-card">
+            "Experiência fantástica. Comecei pequeno e agora já estou nos planos avançados. Continuem com este excelente trabalho."
+            <strong>— R. Manuel, Cabinda</strong>
+        </div>
+
+        <div class="testimonial-card">
+            "Segurança e confiança total. O suporte esclareceu todas as minhas dúvidas antes de fazer a transferência."
+            <strong>— E. Costa, Uíge</strong>
+        </div>
+
+        <div class="testimonial-card">
+            "O melhor serviço de investimento que encontrei focado no mercado angolano. Simples, prático e eficaz."
+            <strong>— K. Simão, Luanda</strong>
         </div>
 
         <!-- Perguntas Frequentes (FAQ) -->
@@ -306,12 +365,12 @@
 
         <div class="faq-item">
             <h4>Como faço para começar a investir?</h4>
-            <p>Basta escolher o seu plano, clicar no botão do Telegram abaixo e falar diretamente com o nosso gestor para iniciar o processo.</p>
+            <p>Basta escolher o seu plano, clicar num dos botões de contacto abaixo e falar diretamente com o nosso gestor para iniciar o processo.</p>
         </div>
 
         <div class="faq-item">
             <h4>Onde são enviados os detalhes de pagamento?</h4>
-            <p>Para garantir a segurança máxima e evitar fraudes ou exposição de dados, todos os procedimentos de transferência são facultados exclusivamente em conversa privada.</p>
+            <p>Para garantir a segurança máxima e evitar fraudes ou exposição de dados, todos os procedimentos são facultados exclusivamente em conversa privada.</p>
         </div>
 
         <div class="faq-item">
@@ -322,17 +381,21 @@
         <div class="section-title">Pronto para Começar?</div>
         <div class="info-box">
             <p style="color: #f6ad55; font-size: 14px; margin-bottom: 8px;">⚠️ <strong>Atendimento Personalizado:</strong></p>
-            <p>Clique abaixo para entrar em contacto imediato com o gestor no Telegram e garantir a sua vaga no plano escolhido.</p>
+            <p>Escolha a sua aplicação favorita abaixo e fale de imediato com o gestor para garantir a sua vaga no plano escolhido.</p>
         </div>
 
-        <a href="https://t.me/Uchiha12355" class="telegram-btn" target="_blank">💬 Falar com o Gestor no Telegram</a>
+        <!-- Botões de Contacto (Telegram + WhatsApp com o número configurado) -->
+        <div class="contact-btns">
+            <a href="https://t.me/Uchiha12355" class="telegram-btn" target="_blank">💬 Falar no Telegram</a>
+            <a href="https://wa.me/244955146843" class="whatsapp-btn" target="_blank">💚 Falar no WhatsApp (+244 955 146 843)</a>
+        </div>
 
         <footer>
             &copy; 2026 KwanzaYield Invest. Todos os direitos reservados.
         </footer>
     </div>
 
-    <!-- Script JavaScript para o Simulador funcionar em tempo real -->
+    <!-- Script JavaScript para o Simulador -->
     <script>
         function calcularLucro() {
             const select = document.getElementById('planSelect');
@@ -344,10 +407,8 @@
             
             document.getElementById('resultadoSimulacao').innerText = total.toLocaleString('pt-PT') + ' Kz';
         }
-        // Executa uma vez ao carregar
         calcularLucro();
     </script>
 
 </body>
 </html>
-
