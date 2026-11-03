@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transferências Seguras | Angola & África do Sul</title>
+    <style>
+        :root {
+            --primary-color: #0044cc;
+            --telegram-color: #0088cc;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+            --card-bg: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        .how-it-works {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .how-it-works h2 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .steps {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .step {
+            flex: 1;
+            min-width: 200px;
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .step-number {
+            background-color: var(--primary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .cards-container {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 2rem;
+            flex: 1;
+            min-width: 280px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-top: 5px solid var(--telegram-color);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .card p {
+            margin-bottom: 1.5rem;
+            color: #666;
+        }
+
+        .btn-telegram {
+            display: inline-block;
+            background-color: var(--telegram-color);
+            color: white;
+            text-decoration: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .btn-telegram:hover {
+            background-color: #006699;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            color: #777;
+            font-size: 0.9rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Transferências Rápidas & Seguras</h1>
+        <p>A ponte financeira direta entre Angola e a África do Sul</p>
+    </header>
+
+    <div class="container">
+        
+        <section class="how-it-works">
+            <h2>Como Funciona?</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h4>Escolha o Destino</h4>
+                    <p>Selecione para qual país deseja enviar os valores.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h4>Fale Connosco</h4>
+                    <p>Clique no botão para receber as coordenadas e a taxa do dia no Telegram.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h4>Envio Rápido</h4>
+                    <p>Faça o pagamento e o valor é libertado imediatamente na conta de destino.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="cards-container">
+            <!-- Cartão Angola -->
+            <div class="card">
+                <h3>🇦🇴 Enviar para Angola</h3>
+                <p>Precisa de enviar fundos para bancos angolanos de forma rápida e com as melhores taxas do mercado?</p>
+                <!-- Link direto para o teu Telegram com mensagem pré-definida -->
+                <a href="https://t.me/Masterkng0?text=Ol%C3%A1!%20Gostaria%20de%20saber%20as%20taxas%20e%20fazer%20uma%20transfer%C3%AAncia%20para%20Angola." class="btn-telegram" target="_blank">
+                    Solicitar Contas (Angola)
+                </a>
+            </div>
+
+            <!-- Cartão África do Sul -->
+            <div class="card">
+                <h3>🇿🇦 Enviar para África do Sul</h3>
+                <p>Precisa de enviar fundos para bancos sul-africanos para negócios ou familiares com total segurança?</p>
+                <!-- Link direto para o teu Telegram com mensagem pré-definida -->
+                <a href="https://t.me/Masterkng0?text=Ol%C3%A1!%20Gostaria%20de%20saber%20as%20taxas%20e%20fazer%20uma%20transfer%C3%AAncia%20para%20a%20%C3%81frica%20do%20Sul." class="btn-telegram" target="_blank">
+                    Solicitar Contas (RSA)
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Serviço de Facilitação de Transferências. Operações seguras via Telegram.</p>
+    </footer>
+
+</body>
+</html>
